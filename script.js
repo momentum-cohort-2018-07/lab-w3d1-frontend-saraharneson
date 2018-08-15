@@ -31,7 +31,6 @@ function assignmentScores(grades, assignmentNum) {
     let assignmentGrades = allGrades.map(function (grade) {
         return grade[assignmentNum]
     })
-
     return assignmentGrades
 }
 
@@ -47,7 +46,6 @@ function assignmentAverageScore(grades, assignmentNum) {
         return average / testScores.length
     }
 
-
 // 4. Create a function called studentAverages that takes a grades object
 // and returns a new object of students and their average score, like this:
 // { indiana: 90, nevada: 80, indigo: 83, ... }
@@ -60,6 +58,22 @@ function assignmentAverageScore(grades, assignmentNum) {
 // 70-80 => C
 // 60-70 => D
 // < 60 => F
+
+// I originally had a range, like  (numberGrade >= 70 && numberGrade is <= 80), but upated the below in class. I copied down notes on a separate file, and am pushing the ones I had finished before class started.
+
+function letterGrade (numberGrade) {
+    if (numberGrade >= 90) {
+        return "A"
+    } else if (numberGrade >= 80) {
+        return "B"
+    } else if (numberGrade >= 70) {
+        return "C"
+    } else if (numberGrade >= 60) {
+        return "D"
+    } else {
+        return "F"
+    }
+}
 
 // 6. Create a function called finalLetterGrades that takes a grades object
 // and returns a new object of students and their final letter grade, as
